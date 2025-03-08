@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Others">
+      <UniqueIdentifier>{12843eb7-6bf6-4a3d-afaa-f84e2ecf0d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mac">
+      <UniqueIdentifier>{0712c692-5a62-474f-a911-924396907217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Auth">
+      <UniqueIdentifier>{57361edb-29f2-4a72-8a9d-96ba75f2588e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protection">
+      <UniqueIdentifier>{587eab74-13d3-4764-9f32-49b7924744df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Files">
+      <UniqueIdentifier>{88fe78ae-e2a0-4607-b850-b3dcbd941d4a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Spoof.cpp" />
+    <ClCompile Include="Mac\mac.cxx">
+      <Filter>Mac</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility\skStr.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Auth\auth.hpp">
+      <Filter>Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\json.hpp">
+      <Filter>Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\utils.hpp">
+      <Filter>Others</Filter>
+    </ClInclude>
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="Mac\mac.hxx">
+      <Filter>Mac</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\lazy.h">
+      <Filter>Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\antidebug.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\antidump.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\vmprotect.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Protection\xorstr.hpp">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\changer.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\driver.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\volume.h">
+      <Filter>Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Auth\libcurl.lib">
+      <Filter>Auth</Filter>
+    </Library>
+    <Library Include="Auth\library_x64.lib">
+      <Filter>Auth</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
