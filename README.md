@@ -11,7 +11,7 @@ This program fully spoofs your PC serials using an external tool. It allows you 
 ✅ **Full spoofing of Windows & Network**
 - **MAC** - Generates unique "legit" address
 - **SID** - Generates random windows ID
-- **MISC** - Completely randomizes MISC. indentifiers
+- **MISC** - Completely randomizes various windows indentifiers
 
 ✅ **Auto BIOS Flasher**
 ✅ **Step-by-Step Guide** – Included to assist in the process
