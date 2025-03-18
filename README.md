@@ -24,4 +24,4 @@ This is **NOT** the complete version. To access the full version, contact me on 
 🔹 Users are **fully responsible** for how they use this software  
 🔹 The author assumes **no liability** for any misuse or consequences 
 
-📌 **Discord:** [@qhxbx](https://discord.gg/EvNTpQFRzz)  
+📌 **Discord:** [@qhxbx](https://discord.gg/5qSBUT3F96)  
