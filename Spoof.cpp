@@ -119,123 +119,12 @@ bool BSOD()
 
 void ProcessFind()
 {
-	ShowWindow(GetConsoleWindow(), SW_HIDE);
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	if (ProcessFinder(_xor_("KsDumperClient.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("HTTPDebuggerUI.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("HTTPDebuggerSvc.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("FolderChangesView.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("ProcessHacker.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("procmon.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("idaq.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("idaq64.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("Wireshark.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("Fiddler.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("Xenos64.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("Cheat Engine.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("HTTP Debugger Windows Service (32 bit).exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("KsDumper.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("x64dbg.exe")))
-	{
-		BSOD();
-	}
-	else if (ProcessFinder(_xor_("ProcessHacker.exe")))
-	{
-		BSOD();
-	}
-	else if (FindWindow(0, _xor_("IDA: Quick start").c_str()))
-	{
-		BSOD();
-	}
-
-	else if (FindWindow(0, _xor_("Memory Viewer").c_str()))
-	{
-		BSOD();
-	}
-	else if (FindWindow(0, _xor_("Process List").c_str()))
-	{
-		BSOD();
-	}
-	else if (FindWindow(0, _xor_("KsDumper").c_str()))
-	{
-		BSOD();
-	}
-	else if (FindWindow(0, _xor_("HTTP Debugger").c_str()))
-	{
-		BSOD();
-	}
-	else if (FindWindow(0, _xor_("OllyDbg").c_str()))
-	{
-		BSOD();
-	}
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
 }
 
 void ProcessKiller()
 {
-	LI_FN(system)(skCrypt("taskkill /f /im HTTPDebuggerUI.exe >nul 2>&1"));
-	LI_FN(system)(skCrypt("taskkill /f /im HTTPDebuggerSvc.exe >nul 2>&1"));
-	LI_FN(system)(skCrypt("sc stop HTTPDebuggerPro >nul 2>&1"));
-	LI_FN(system)(skCrypt("taskkill /FI \"IMAGENAME eq cheatengine*\" /IM * /F /T >nul 2>&1"));
-	LI_FN(system)(skCrypt("taskkill /FI \"IMAGENAME eq httpdebugger*\" /IM * /F /T >nul 2>&1"));
-	LI_FN(system)(skCrypt("taskkill /FI \"IMAGENAME eq processhacker*\" /IM * /F /T >nul 2>&1"));
-	LI_FN(system)(skCrypt("taskkill /f /im epicgameslauncher.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im EpicWebHelper.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im FortniteClient - Win64 - Shipping_EAC.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im FortniteClient - Win64 - Shipping_BE.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im FortniteLauncher.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im FortniteClient - Win64 - Shipping.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im EpicGamesLauncher.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im EasyAntiCheat.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im BEService.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im BEServices.exe > nul"));
-	LI_FN(system)(skCrypt("taskkill /f /im BattleEye.exe > nul"));
-	LI_FN(system)(skCrypt("sc stop BattlEye Service"));
-	LI_FN(system)(skCrypt("sc stop EasyAntiCheat"));
-	std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+
 }
 
 void VolumeID()
@@ -265,16 +154,7 @@ void Finished()
 	std::remove(skCrypt("C:\\Windows\\System32\\vdfjdisfudasu.exe"));
 	std::remove(skCrypt("C:\\Windows\\System32\\zhjers.exe"));
 	std::remove(skCrypt("C:\\Windows\\System32\\AMIFLDRV64.SYS"));
-
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SOFTWARE\\Microsoft\\Cryptography /v MachineGuid /t REG_SZ /d %random%%random%-%random%-%random%-%random% /f"));
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\" \"NT\\CurrentVersion /v ProductId /t REG_SZ /d %random%%random%-%random%-%random%-%random% /f"));
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\" \"NT\\CurrentVersion /v InstallDate /t REG_SZ /d %random%%random% /f"));
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\" \"NT\\CurrentVersion /v InstallTime /t REG_SZ /d %random% /f"));
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SOFTWARE\\Microsoft\\Windows\" \"NT\\CurrentVersion /v BuildLabEx /t REG_SZ /d %random% /f"));
-	LI_FN(system)(skCrypt("REG ADD HKLM\\SYSTEM\\CurrentControlSet\\Control\\IDConfigDB\\Hardware\" \"Profiles\\0001 /v HwProfileGuid /t REG_SZ /d {%random%%random%-%random%-%random%-%random%%random%} /f"));
-
-	LI_FN(system)(skCrypt("wmic computersystem where name=%computername% call rename=%random%"));
-
+	
 	LI_FN(system)(skCrypt("cls"));
 	LI_FN(Sleep)(2000);
 
@@ -401,45 +281,6 @@ fourthserial:
 		goto fourthserial;
 	}
 
-	ShowWindow(GetConsoleWindow(), SW_HIDE);
-
-	system(("C:\\Windows\\System32\\zhjers.exe /PSN " + PSN).c_str());
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SK \"To be filled by O.E.M\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SF \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BT \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BLC \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CA \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);;
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CSK \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IVN \"American Megatrends International, LLC.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /ID \"06/27/23\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IV \"A.F0\" "));;
 
 	LI_FN(Sleep)(1000);
 
@@ -473,50 +314,6 @@ void Null()
 	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BS \"To be filled by O.E.M\" "));
 
 	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /PSN \"Unknown\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CS \"To be filled by O.E.M\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SK \"To be filled by O.E.M\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SF \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BT \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BLC \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CA \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);;
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CSK \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IVN \"American Megatrends International, LLC.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /ID 06/27/23 "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IV \"A.F0\" "));;
-
-	LI_FN(Sleep)(1000);
 
 	VolumeID();
 
@@ -553,42 +350,6 @@ void Randomize()
 	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CS %random%-%random%-%random%"));
 
 	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SK \"To be filled by O.E.M\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /SF \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BT \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /BLC \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CA \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);;
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /CSK \"To be filled by O.E.M.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IVN \"American Megatrends International, LLC.\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /ID \"06/27/23\" "));
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("C:\\Windows\\System32\\zhjers.exe /IV \"A.F0\" "));;
-
-	LI_FN(Sleep)(1000);
 
 	VolumeID();
 	MAC();
