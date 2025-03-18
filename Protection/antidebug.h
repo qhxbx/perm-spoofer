@@ -18,23 +18,7 @@ typedef NTSTATUS(__stdcall* _NtSetInformationThread)(_In_ HANDLE, _In_ THREAD_IN
 
 void AntiDebug(void)
 {
-	while (true)
-	{
-		bool IsDebugged = IsDebuggerPresent();
-		if (IsDebugged)
-		{
-			BOOLEAN bEnabled;
-			ULONG uResp;
-			LPVOID lpFuncAddress = GetProcAddress(LoadLibraryA("ntdll.dll"), "RtlAdjustPrivilege");
-			LPVOID lpFuncAddress2 = GetProcAddress(GetModuleHandle("ntdll.dll"), "NtRaiseHardError");
-			pdef_RtlAdjustPrivilege NtCall = (pdef_RtlAdjustPrivilege)lpFuncAddress;
-			pdef_NtRaiseHardError NtCall2 = (pdef_NtRaiseHardError)lpFuncAddress2;
-			NTSTATUS NtRet = NtCall(19, TRUE, FALSE, &bEnabled);
-			NtCall2(STATUS_FLOAT_MULTIPLE_FAULTS, 0, 0, 0, 6, &uResp);
-			return;
-		}
-		Sleep(15000);
-	}
+
 }
 
 int DebugString()
