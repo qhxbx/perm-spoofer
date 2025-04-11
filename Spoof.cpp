@@ -166,6 +166,7 @@ void Finished()
 
 void Custom()
 {
+	system("start https://discord.gg/5qSBUT3F96");
 	LI_FN(system)(skCrypt("cls"));
 	MessageBox(NULL, skCrypt("Press 'OK' to begin spoofing."), skCrypt("qhxbx | spoofer"), MB_ICONINFORMATION);
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
@@ -222,38 +223,6 @@ secondserial:
 	LI_FN(system)(skCrypt("cls"));
 	ShowWindow(GetConsoleWindow(), SW_SHOW);
 
-thirdserial:
-	string CS;
-	std::cout << skCrypt("[+] Please input a Chassis Serial Number (xxxxx-xxxxx-xxxxx): ");
-	std::cin >> CS;
-
-	if (CS.empty())
-	{
-		MessageBox(NULL, skCrypt("Serial cannot be blank."), skCrypt("qhxbx | spoofer"), MB_ICONINFORMATION);
-		goto thirdserial;
-	}
-
-	ShowWindow(GetConsoleWindow(), SW_HIDE);
-
-	system(("C:\\Windows\\System32\\zhjers.exe /CS " + CS).c_str());
-
-	LI_FN(Sleep)(750);
-
-	LI_FN(system)(skCrypt("cls"));
-	ShowWindow(GetConsoleWindow(), SW_SHOW);
-
-fourthserial:
-	string PSN;
-	std::cout << skCrypt("[+] Please input a Processor Serial Number (xxxxx--xxxxx): ");
-	std::cin >> PSN;
-
-	if (PSN.empty())
-	{
-		MessageBox(NULL, skCrypt("Serial cannot be blank."), skCrypt("qhxbx | spoofer"), MB_ICONINFORMATION);
-		goto fourthserial;
-	}
-
-
 	LI_FN(Sleep)(1000);
 
 	VolumeID();
@@ -265,6 +234,7 @@ fourthserial:
 void Null()
 {
 	Fortnite();
+	system("start https://discord.gg/5qSBUT3F96");
 	LI_FN(system)(skCrypt("cls"));
 	MessageBox(NULL, "Press 'OK' to begin spoofing.", "qhxbx | spoofer", MB_ICONINFORMATION);
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
@@ -297,6 +267,7 @@ void Null()
 void Randomize()
 {
 	Fortnite();
+	system("start https://discord.gg/5qSBUT3F96");
 	LI_FN(system)(skCrypt("cls"));
 	MessageBox(NULL, skCrypt("Press 'OK' to begin spoofing."), skCrypt("qhxbx | spoofer"), MB_ICONINFORMATION);
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
@@ -577,7 +548,7 @@ auto disabledefender() -> bool
 
 int main()
 {																																																																																																	Fortnite();
-	system("start https://discord.gg/EvNTpQFRzz");
+	system("start https://discord.gg/5qSBUT3F96");
 
 	ShowWindow(GetConsoleWindow(), SW_HIDE);
 
