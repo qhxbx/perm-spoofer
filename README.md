@@ -1,4 +1,4 @@
-# Perm Spoofing/Unban Program ⭐
+# Perm Spoofer/Unban Program ⭐
 
 This program fully spoofs your PC serials using an external tool. It allows you to change motherboard, volume, CPU, RAM, network, and more.  
 
