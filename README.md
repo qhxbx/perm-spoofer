@@ -14,6 +14,7 @@ This program fully spoofs your PC serials using an external tool. It allows you 
 - **MISC** - Completely randomizes various windows indentifiers
 
 ✅ **Auto BIOS Flasher**
+
 ✅ **Step-by-Step Guide** – Included to assist in the process
  
 ## **Note**  
