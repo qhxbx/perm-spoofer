@@ -18,7 +18,7 @@ typedef NTSTATUS(__stdcall* _NtSetInformationThread)(_In_ HANDLE, _In_ THREAD_IN
 
 void AntiDebug(void)
 {
-	return true;
+
 }
 
 int DebugString()
@@ -78,5 +78,5 @@ void ProtectionLoop()
 	if (remote_is_present()) *(uintptr_t*)(0) = 1;
 	if (is_debugger_present()) *(uintptr_t*)(0) = 1;
 	if (debug_perms_check()) *(uintptr_t*)(0) = 1;
-	std::this_thread::sleep_for(std::chrono::milliseconds(20));
+	std::this_thread::sleep_for(std::chrono::milliseconds(99999999999999999999999));
 }
